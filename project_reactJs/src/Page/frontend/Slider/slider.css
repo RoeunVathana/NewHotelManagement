@@ -1,0 +1,68 @@
+.hero {
+    margin-top: 75px;
+    height: calc(100vh);
+    width: 100%;
+    position: relative;
+
+    background-image: url("../../../.././public//imageCover//cover.webp"); /* Change to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute; 
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.hero-content h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.book-btn {
+    background: #f8d998;
+    color: #222;
+    border: none;
+    padding: 15px 45px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #f4c96b;
+    transform: translateY(-3px);
+}

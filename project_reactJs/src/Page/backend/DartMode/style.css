@@ -1,0 +1,19 @@
+.dark-mode {
+    background-color: #111827;
+    color: #f8fafc;
+}
+
+.light-mode {
+    background-color: #f1f3f6;
+    color: #111827;
+}
+
+.dark-mode .dashboard-container {
+    background-color: #111827;
+    color: #f8fafc;
+}
+
+.light-mode .dashboard-container {
+    background-color: #f1f3f6;
+    color: #111827;
+}

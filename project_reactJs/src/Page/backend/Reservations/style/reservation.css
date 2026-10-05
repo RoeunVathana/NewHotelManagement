@@ -1,0 +1,866 @@
+body.dark-mode .dashboard {
+  /* background: #0f172a; */
+   background: #172036;
+}
+
+body.dark-mode .dashboard .room-type-table tbody tr:hover {
+  background: #1e293b;
+}
+
+body.light-mode .dashboard {
+  background: #f1f3f6;
+}
+
+/* =========================================
+   Reservation Page
+========================================= */
+
+.reservation-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(0, 168, 144, 0.12), transparent 28%),
+    linear-gradient(180deg, #f5f7fb 0%, #edf2f8 100%);
+  color: #10213a;
+}
+
+.reservation-container {
+  width: calc(100% - 40px);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 0 50px;
+}
+
+
+/* =========================================
+   Header
+========================================= */
+
+.reservation-header {
+  min-height: 74px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(220, 227, 237, 0.9);
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 18px;
+  margin-bottom: 18px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.reservation-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: linear-gradient(135deg, #dffaf5, #c6f3e4);
+  color: #00a58a;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.reservation-title h1 {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 20px;
+
+  color: #10213a;
+}
+
+.reservation-title p {
+  margin: 3px 0 0;
+
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #657895;
+}
+
+
+/* =========================================
+   Create Booking Button
+========================================= */
+
+.create-booking-btn {
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #0dbb9a 0%, #009f83 100%);
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 22px rgba(0, 159, 131, 0.25);
+
+  transition: all 0.2s ease;
+}
+
+.create-booking-btn:hover {
+  background: linear-gradient(135deg, #0aae94 0%, #008d72 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(0, 159, 131, 0.28);
+}
+
+
+/* =========================================
+   Filter
+========================================= */
+
+.reservation-filter {
+  min-height: 62px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid rgba(220, 227, 237, 0.9);
+  border-radius: 16px;
+
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.filter-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #58708e;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.status-buttons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.filter-btn {
+  height: 30px;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  padding: 0 12px;
+
+  background: #f1f5f9;
+  color: #173353;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #e8eef6;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #172940 0%, #1c3553 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(23, 41, 64, 0.18);
+}
+
+
+/* =========================================
+   Channel
+========================================= */
+
+.channel-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #7a8ca5;
+
+  font-size: 14px;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 106px;
+}
+
+.select-wrapper select {
+  width: 100%;
+  height: 33px;
+
+  appearance: none;
+
+  border: 1px solid #dce4ee;
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  padding: 0 28px 0 11px;
+
+  color: #203957;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.select-wrapper svg {
+  position: absolute;
+  right: 8px;
+  top: 9px;
+
+  pointer-events: none;
+
+  color: #344d6b;
+}
+
+
+/* =========================================
+   Table Container
+========================================= */
+
+.reservation-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid rgba(220, 227, 237, 0.9);
+  border-radius: 18px;
+
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+
+/* =========================================
+   Table
+========================================= */
+
+.reservation-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 1050px;
+}
+
+.reservation-table thead {
+  background: linear-gradient(180deg, #f9fbfd 0%, #f4f7fb 100%);
+}
+
+.reservation-table th {
+  height: 42px;
+
+  padding: 0 15px;
+
+  border-bottom: 1px solid #dce3ed;
+
+  text-align: left;
+
+  color: #173353;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.reservation-table td {
+  height: 60px;
+
+  padding: 8px 15px;
+
+  border-bottom: 1px solid #e5eaf0;
+
+  vertical-align: middle;
+
+  font-size: 14px;
+}
+
+.reservation-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reservation-table tbody tr {
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.reservation-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(13, 187, 154, 0.04), rgba(255, 255, 255, 0.7));
+}
+
+
+/* =========================================
+   Booking ID
+========================================= */
+
+.booking-id {
+  color: #102b4a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   Guest
+========================================= */
+
+.guest-info,
+.room-info,
+.stay-info,
+.amount-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-info strong {
+  color: #132b48;
+  font-size: 14px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.guest-info span {
+  margin-top: 2px;
+
+  color: #8191a8;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   Room
+========================================= */
+
+.room-info strong {
+  color: #132b48;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.room-info span {
+  margin-top: 2px;
+
+  color: #70839e;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   Stay Dates
+========================================= */
+
+.stay-info strong {
+  color: #526d8d;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.stay-info span {
+  margin-top: 2px;
+
+  color: #8292a9;
+
+  font-size: 14x;
+}
+
+
+/* =========================================
+   Status
+========================================= */
+
+.status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px;
+  height: 24px;
+
+  padding: 0 10px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.status.checked-in {
+  background: linear-gradient(135deg, #d9fbe9, #c2f1d9);
+  color: #0a7d5e;
+}
+
+.status.checked-out {
+  background: linear-gradient(135deg, #edf2f7, #e3ebf5);
+  color: #50627a;
+}
+
+.status.confirmed {
+  background: linear-gradient(135deg, #fff5d8, #ffe8a8);
+  color: #a45a00;
+}
+
+.status.cancelled {
+  background: linear-gradient(135deg, #ffe5ea, #ffd3dc);
+  color: #c52342;
+}
+
+
+/* =========================================
+   Source
+========================================= */
+
+.source-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 22px;
+
+  padding: 0 10px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #f5f7fb, #edf3fb);
+  border: 1px solid #dfe7f1;
+
+  color: #36506e;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   Amount
+========================================= */
+
+.amount-info {
+  align-items: flex-end;
+}
+
+.amount-info strong {
+  color: #102c4b;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.amount-info span {
+  margin-top: 2px;
+
+  color: #00a078;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   Actions
+========================================= */
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 9px;
+
+  white-space: nowrap;
+}
+
+.action-btn {
+  height: 28px;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 0 12px;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.action-btn.check-in {
+  background: linear-gradient(135deg, #19c79c 0%, #009f83 100%);
+  box-shadow: 0 8px 18px rgba(0, 159, 131, 0.18);
+}
+
+.action-btn.check-in:hover {
+  background: linear-gradient(135deg, #12b991 0%, #008b73 100%);
+}
+
+.action-btn.check-out {
+  background: linear-gradient(135deg, #ff5f87 0%, #f00046 100%);
+  box-shadow: 0 8px 18px rgba(240, 0, 70, 0.18);
+}
+
+.action-btn.check-out:hover {
+  background: linear-gradient(135deg, #f7517d 0%, #d9003f 100%);
+}
+
+
+/* =========================================
+   Action Icons
+========================================= */
+
+.icon-action {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: #f3f7fb;
+
+  color: #263f5d;
+
+  cursor: pointer;
+
+  border-radius: 8px;
+
+  transition: all 0.2s ease;
+}
+
+.icon-action:hover {
+  background: #eaf1f7;
+  transform: translateY(-1px);
+}
+
+.icon-action.cancel {
+  color: #ff1744;
+  border: 1px solid rgba(255, 23, 68, 0.35);
+  border-radius: 50%;
+  background: rgba(255, 23, 68, 0.04);
+}
+
+.icon-action.cancel:hover {
+  background: rgba(255, 23, 68, 0.08);
+}
+
+
+/* =========================================
+   Empty State
+========================================= */
+
+.empty-reservation {
+  height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #8191a8;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 1000px) {
+  .reservation-container {
+    width: calc(100% - 24px);
+  }
+
+  .reservation-filter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 12px;
+  }
+
+  .filter-left {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .status-buttons {
+    flex-shrink: 0;
+  }
+
+  .channel-filter {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .reservation-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .create-booking-btn {
+    width: 100%;
+  }
+
+  .reservation-title h1 {
+    font-size: 14px;
+  }
+
+  .filter-left {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .status-buttons {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 3px;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+  }
+
+  .channel-filter {
+    justify-content: space-between;
+  }
+
+  .select-wrapper {
+    width: 130px;
+  }
+}
+
+.reservation-employee-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(12, 25, 41, 0.58);
+  backdrop-filter: blur(3px);
+}
+
+.reservation-employee-modal {
+  width: min(100%, 420px);
+  overflow: hidden;
+  border: 1px solid #dce5ed;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 22px 60px rgba(12, 25, 41, 0.24);
+  animation: reservationEmployeeIn 160ms ease-out;
+}
+
+@keyframes reservationEmployeeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.reservation-employee-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 18px;
+  border-bottom: 1px solid #e7edf2;
+}
+
+.reservation-employee-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 8px;
+  background: #e7f8f3;
+  color: #008f75;
+}
+
+.reservation-employee-header h2 {
+  margin: 0;
+  color: #152942;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.reservation-employee-header p {
+  margin: 3px 0 0;
+  color: #718096;
+  font-size: 12px;
+}
+
+.reservation-employee-close {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.reservation-employee-close:hover {
+  background: #f1f5f8;
+  color: #172b45;
+}
+
+.reservation-employee-body {
+  padding: 18px;
+}
+
+.reservation-employee-body label {
+  display: block;
+  margin-bottom: 7px;
+  color: #43566d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reservation-employee-body select {
+  width: 100%;
+  height: 42px;
+  padding: 0 11px;
+  border: 1px solid #cad6e0;
+  border-radius: 6px;
+  background: #fff;
+  color: #263d55;
+  font: inherit;
+  font-size: 13px;
+}
+
+.reservation-employee-body select:focus {
+  outline: 2px solid rgba(0, 159, 131, 0.2);
+  border-color: #009f83;
+}
+
+.reservation-employee-empty {
+  margin: 9px 0 0;
+  color: #a33b36;
+  font-size: 12px;
+}
+
+.reservation-employee-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.reservation-employee-actions button {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  border: 1px solid #d5dfe8;
+  border-radius: 6px;
+  background: #fff;
+  color: #455a70;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reservation-employee-actions button:hover:not(:disabled) {
+  background: #f4f7f9;
+}
+
+.reservation-employee-actions .reservation-employee-submit {
+  border-color: #008f75;
+  background: #008f75;
+  color: #fff;
+}
+
+.reservation-employee-actions .reservation-employee-submit:hover:not(:disabled) {
+  background: #007b65;
+}
+
+.reservation-employee-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}

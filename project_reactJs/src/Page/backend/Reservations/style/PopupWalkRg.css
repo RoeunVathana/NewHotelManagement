@@ -1,0 +1,698 @@
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.popup-walkin-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(15, 23, 42, 0.65);
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.popup-walkin-modal {
+    width: 100%;
+    max-width: 900px;
+
+    max-height: 96vh;
+    overflow-y: auto;
+
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 28px 60px rgba(15, 23, 42, 0.28),
+        0 10px 24px rgba(15, 23, 42, 0.08);
+
+    overflow-x: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+
+/* Scrollbar */
+
+.popup-walkin-modal::-webkit-scrollbar {
+    width: 5px;
+}
+
+.popup-walkin-modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.popup-walkin-modal::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.popup-walkin-header {
+    height: 76px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(135deg, #101a30 0%, #172943 100%);
+
+    color: white;
+    box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+}
+
+
+.popup-walkin-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.popup-walkin-header-icon {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #00b894;
+
+    font-size: 17px;
+}
+
+
+.popup-walkin-header h2 {
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 22px;
+}
+
+
+.popup-walkin-header span {
+    display: block;
+
+    color: #aab5c8;
+
+    font-size: 11px;
+    line-height: 15px;
+}
+
+
+.popup-walkin-close {
+    border: none;
+    background: transparent;
+
+    color: #8d9ab0;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+
+.popup-walkin-close:hover {
+    color: white;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+.popup-walkin-body {
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at top right, rgba(13, 187, 154, 0.05), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.popup-walkin-section {
+    margin-bottom: 12px;
+}
+
+
+.popup-walkin-section-title {
+    position: relative;
+
+    margin-bottom: 10px;
+
+    color: #26364d;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.popup-walkin-section-title>span {
+    color: #00a98f;
+}
+
+
+/* =====================================================
+   GUEST TABS
+===================================================== */
+
+.popup-walkin-guest-tabs {
+    margin-left: auto;
+
+    display: flex;
+
+    background: #f0f3f7;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+
+.popup-walkin-guest-tabs button {
+    border: none;
+
+    padding: 5px 8px;
+
+    background: transparent;
+    color: #66758a;
+
+    font-size: 8px;
+
+    cursor: pointer;
+}
+
+
+.popup-walkin-guest-tabs .popup-walkin-active-tab {
+    background: #ffffff;
+
+    color: #00a98f;
+
+    font-weight: 600;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.popup-walkin-grid {
+    display: grid;
+
+    gap: 6px;
+}
+
+
+.popup-walkin-guest-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.popup-walkin-four-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.popup-walkin-body input,
+.popup-walkin-body select {
+    width: 100%;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d7e0eb;
+
+    border-radius: 8px;
+
+    background: #fbfcfe;
+
+    color: #34445a;
+
+    outline: none;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+
+.popup-walkin-body input::placeholder {
+    color: #99a5b5;
+}
+
+
+.popup-walkin-body input:focus,
+.popup-walkin-body select:focus {
+    border-color: #00a98f;
+
+    box-shadow: 0 0 0 2px rgba(0, 169, 143, 0.08);
+}
+
+
+/* =====================================================
+   INPUT GROUP
+===================================================== */
+
+.popup-walkin-input-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.popup-walkin-input-group label {
+    color: #718096;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   ROOM TYPE
+===================================================== */
+
+.popup-walkin-room-types {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 5px;
+
+    margin-bottom: 7px;
+}
+
+
+.popup-walkin-room-card {
+    min-height: 58px;
+
+    padding: 10px;
+
+    text-align: left;
+
+    background: #ffffff;
+
+    border: 1px solid #dce4ed;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.popup-walkin-room-card:hover {
+    border-color: #00b89c;
+}
+
+
+.popup-walkin-room-card-selected {
+    background: #f1fffc;
+
+    border: 1.5px solid #00b89c;
+}
+
+
+.popup-walkin-room-card strong {
+    display: block;
+
+    color: #3c4d62;
+
+    font-size: 12px;
+
+    margin-bottom: 4px;
+}
+
+
+.popup-walkin-room-card span {
+    display: block;
+
+    color: #708096;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   ROOM SELECT
+===================================================== */
+
+.popup-walkin-room-select select {
+    height: 40px;
+
+    font-size: 13px;
+
+    background: #f8fafc;
+}
+
+
+/* =====================================================
+   ADDONS
+===================================================== */
+
+.popup-walkin-addons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6px;
+}
+
+
+.popup-walkin-addon-card {
+    min-height: 52px;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 6px;
+
+    border: 1px solid #dce4ed;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    background: #ffffff;
+}
+
+
+.popup-walkin-addon-card:hover {
+    border-color: #00b89c;
+}
+
+
+.popup-walkin-addon-card input {
+    width: 11px;
+    height: 11px;
+
+    margin-top: 1px;
+
+    accent-color: #009e88;
+}
+
+
+.popup-walkin-addon-card strong {
+    display: block;
+
+    color: #33445a;
+
+    font-size: 12px;
+
+    line-height: 16px;
+}
+
+
+.popup-walkin-addon-card span {
+    display: block;
+
+    color: #8793a4;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   PRICE SUMMARY
+===================================================== */
+
+.popup-walkin-price-summary {
+    margin-top: 14px;
+
+    padding: 16px;
+
+    background: linear-gradient(135deg, #101a30 0%, #182a42 100%);
+
+    border-radius: 12px;
+
+    color: #ffffff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+.popup-walkin-price-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 5px;
+}
+
+
+.popup-walkin-price-row span {
+    color: #d0d7e2;
+
+    font-size: 12px;
+}
+
+
+.popup-walkin-price-row strong {
+    color: #dce3ec;
+
+    font-size: 12px;
+}
+
+
+.popup-walkin-price-divider {
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    margin: 7px 0;
+}
+
+
+.popup-walkin-grand-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.popup-walkin-grand-total span {
+    color: #ffc400;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.popup-walkin-grand-total strong {
+    color: #ffc400;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DEPOSIT
+===================================================== */
+
+.popup-walkin-deposit-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 8px;
+}
+
+
+.popup-walkin-deposit-row>span {
+    color: #b9c3d2;
+
+    font-size: 12px;
+}
+
+
+.popup-walkin-deposit-input {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.popup-walkin-deposit-input>span {
+    color: #b9c3d2;
+
+    font-size: 13px;
+}
+
+
+.popup-walkin-deposit-input input {
+    width: 120px;
+
+    height: 32px;
+
+    background: #1d2b45;
+
+    border: 1px solid #34445f;
+
+    color: #ffc400;
+
+    text-align: right;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CONFIRM BUTTON
+===================================================== */
+
+.popup-walkin-confirm-button {
+    width: 100%;
+
+    height: 46px;
+
+    margin-top: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #13c49a 0%, #00a982 100%);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow: 0 12px 24px rgba(0, 169, 130, 0.2);
+}
+
+
+.popup-walkin-confirm-button:hover {
+    background: linear-gradient(135deg, #10b891 0%, #008f70 100%);
+
+    transform: translateY(-1px);
+}
+
+.popup-walkin-confirm-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    transform: none;
+}
+
+.popup-walkin-spinner {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    animation: popupWalkinSpin 0.8s linear infinite;
+}
+
+@keyframes popupWalkinSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.popup-walkin-empty {
+    margin: 8px 0 0;
+    color: #a33b36;
+    font-size: 12px;
+}
+
+
+.popup-walkin-confirm-button span {
+    margin-right: 5px;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .popup-walkin-overlay {
+        padding: 10px;
+    }
+
+    .popup-walkin-modal {
+        max-height: 96vh;
+    }
+
+    .popup-walkin-guest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popup-walkin-four-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .popup-walkin-room-types {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .popup-walkin-addons {
+        grid-template-columns: 1fr;
+    }
+}

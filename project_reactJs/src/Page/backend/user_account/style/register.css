@@ -1,0 +1,578 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+
+/* =========================
+   REGISTER PAGE
+========================= */
+
+.register-page {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    background-image: url("/imageCover/backgoroundHotel.gif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(135deg,
+            rgba(24, 27, 75, 0.45),
+            rgba(92, 51, 137, 0.25));
+}
+
+
+/* =========================
+   REGISTER CARD
+========================= */
+
+.register-card {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 30px 45px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(80, 85, 130, 0.65),
+            rgba(44, 43, 85, 0.72));
+
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+    color: white;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    width: 55px;
+
+    height: 55px;
+
+    margin:
+        0 auto 5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 36px;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 8px;
+}
+
+.header p {
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TWO COLUMN
+========================= */
+
+.two-column {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+    margin-bottom: 18px;
+
+    min-width: 0;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.form-group input {
+    width: 100%;
+
+    height: 48px;
+
+    padding:
+        0 16px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.5);
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.22);
+
+    color: #1d213d;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.form-group input::placeholder {
+    color:
+        rgba(29, 33, 61, 0.7);
+}
+
+.form-group input:focus {
+    border-color:
+        #9c6cff;
+
+    box-shadow:
+        0 0 0 3px rgba(156, 108, 255, 0.15);
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 50px;
+}
+
+.eye-button {
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    background:
+        transparent;
+
+    color:
+        rgba(255, 255, 255, 0.6);
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.eye-button:hover {
+    color: white;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.form-group select {
+    width: 100%;
+
+    height: 48px;
+
+    padding:
+        0 42px 0 16px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.5);
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.22);
+
+    color: rgba(29, 33, 61, 0.9);
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, rgba(29, 33, 61, 0.8) 50%),
+        linear-gradient(135deg, rgba(29, 33, 61, 0.8) 50%, transparent 50%);
+    background-position:
+        calc(100% - 18px) calc(50% - 3px),
+        calc(100% - 12px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.form-group select:focus {
+    border-color:
+        #9c6cff;
+
+    box-shadow:
+        0 0 0 3px rgba(156, 108, 255, 0.15);
+}
+
+.two-column .form-group select option {
+    background:
+        rgba(255, 255, 255, 0.242);
+
+    color: #1d213d;
+}
+
+.two-column .form-group select:invalid {
+    color: rgba(29, 33, 61, 0.7);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.form-group textarea {
+    width: 100%;
+
+    padding:
+        14px 16px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.5);
+
+    outline: none;
+
+    resize: none;
+
+    background:
+        rgba(255, 255, 255, 0.22);
+
+    color: #1d213d;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.form-group textarea::placeholder {
+    color:
+        rgba(29, 33, 61, 0.7);
+}
+
+.form-group textarea:focus {
+    border-color:
+        #9c6cff;
+
+    box-shadow:
+        0 0 0 3px rgba(156, 108, 255, 0.15);
+}
+
+
+/* =========================
+   IMAGE UPLOAD
+========================= */
+
+.image-upload {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 22px;
+}
+
+.image-preview {
+    width: 90px;
+
+    height: 90px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border:
+        2px solid rgba(255, 255, 255, 0.3);
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    color:
+        rgba(255, 255, 255, 0.6);
+
+    margin-bottom: 10px;
+}
+
+.image-preview img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   UPLOAD BUTTON
+========================= */
+
+.upload-button {
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding:
+        8px 18px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.upload-button:hover {
+    background:
+        rgba(255, 255, 255, 0.2);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.register-button {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    color: #222;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   LOGIN LINK
+========================= */
+
+.login-link {
+    margin-top: 22px;
+
+    text-align: center;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+}
+
+.login-link button {
+    margin-left: 5px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+.login-link button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .register-page {
+        padding:
+            20px 15px;
+    }
+
+    .register-card {
+        padding:
+            30px 22px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    /*
+       Change two columns
+       to one column on mobile
+    */
+
+    .two-column {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+}

@@ -1,0 +1,13 @@
+body.dark-mode .dashboard {
+  /* background: #0f172a; */
+   background: #172036;
+}
+
+body.dark-mode .dashboard .room-type-table tbody tr:hover {
+  background: #1e293b;
+}
+
+body.light-mode .dashboard {
+  background: #f1f3f6;
+}
+

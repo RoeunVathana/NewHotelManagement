@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url("/imageCover/backgoroundHotel.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 30px;
+}
+
+/* Dark purple overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(135deg,
+            rgba(24, 27, 75, 0.45),
+            rgba(92, 51, 137, 0.25));
+}
+
+/* Glass Card */
+.login-card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 535px;
+    padding: 28px 44px 20px;
+    border-radius: 24px;
+    background:
+        linear-gradient(135deg,
+            rgba(80, 85, 130, 0.65),
+            rgba(44, 43, 85, 0.72));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+    color: white;
+}
+
+/* Logo */
+.logo {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    filter: saturate(1.2);
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.header p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    border-radius: 17px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    outline: none;
+    background: rgba(60, 60, 100, 0.25);
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.form-group input:focus {
+    border-color: #9c6cff;
+    box-shadow:
+        0 0 0 3px rgba(156, 108, 255, 0.15);
+}
+
+/* Password */
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 50px;
+}
+
+.eye-button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+/* Options */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 22px;
+    font-size: 12px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.checkbox.checked {
+    background: #a56cff;
+    border-color: #a56cff;
+}
+
+.forgot {
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.forgot:hover {
+    color: white;
+}
+
+/* Login button */
+.login-button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.divider p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+}
+
+/* Google */
+.google-button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.google-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.google-icon {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4285f4;
+}
+
+/* Sign up */
+.signup {
+    margin-top: 35px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+}
+
+.signup button {
+    margin-left: 5px;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.signup button:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+
+    .login-page {
+        padding: 20px;
+    }
+
+    .login-card {
+        padding: 35px 25px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .options {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,189 @@
+erDiagram
+    %% ==========================================
+    %% ENTITIES
+    %% ==========================================
+
+    users {
+        int user_id PK
+        varchar username
+        varchar password
+        timestamp created_at
+    }
+
+    user_profile {
+        int id PK
+        int user_id FK
+        varchar first_name
+        varchar last_name
+        enum gender
+        varchar phone
+        text address
+        varchar image
+        timestamp created_at
+    }
+
+    Role {
+        int id PK
+        varchar role_name
+        bool status
+    }
+
+    User_Role {
+        int id PK
+        int user_id FK
+        int role_id FK
+        timestamp created_at
+    }
+
+    permission_group {
+        int id PK
+        varchar group_name
+        timestamp created_at
+    }
+
+    permission {
+        int id PK
+        varchar permission_name
+        int group_id FK
+        varchar route_name
+        timestamp created_at
+    }
+
+    permission_role {
+        int id PK
+        int role_id FK
+        int permission_id FK
+    }
+
+    customers {
+        int customer_id PK
+        varchar first_name
+        varchar last_name
+        enum gender
+        varchar phone
+        varchar email
+        varchar nationality
+        varchar passport_no
+        text address
+        timestamp created_at
+    }
+
+    employees {
+        int employee_id PK
+        varchar full_name
+        enum gender
+        varchar phone
+        varchar email
+        varchar role
+        decimal salary
+        date hire_date
+    }
+
+    room_types {
+        int room_type_id PK
+        varchar name
+        decimal price_per_night
+        int max_guest
+        text description
+    }
+
+    rooms {
+        int room_id PK
+        varchar room_number
+        int room_type_id FK
+        int floor
+        enum status
+        text description
+    }
+
+    reservations {
+        int reservation_id PK
+        int customer_id FK
+        date reservation_date
+        date check_in_date
+        date check_out_date
+        int total_guest
+        enum status
+        text note
+    }
+
+    reservation_details {
+        int reservation_detail_id PK
+        int reservation_id FK
+        int room_id FK
+        decimal price
+        int nights
+        decimal subtotal
+    }
+
+    check_ins {
+        int checkin_id PK
+        int reservation_id FK
+        int employee_id FK
+        datetime checkin_time
+        decimal deposit
+    }
+
+    check_outs {
+        int checkout_id PK
+        int reservation_id FK
+        int employee_id FK
+        datetime checkout_time
+        decimal total_amount
+        decimal damage_fee
+        decimal discount
+    }
+
+    payments {
+        int payment_id PK
+        int reservation_id FK
+        decimal amount
+        enum payment_method
+        datetime payment_date
+        varchar transaction_id
+        enum status
+    }
+
+    services {
+        int service_id PK
+        varchar service_name
+        decimal price
+        text description
+    }
+
+    service_orders {
+        int order_id PK
+        int reservation_id FK
+        int service_id FK
+        int quantity
+        decimal total
+        datetime order_date
+    }
+
+    %% ==========================================
+    %% RELATIONSHIPS
+    %% ==========================================
+
+    users ||--o| user_profile : "has"
+    users ||--o{ User_Role : "assigned"
+    Role ||--o{ User_Role : "belongs_to"
+    Role ||--o{ permission_role : "holds"
+    permission ||--o{ permission_role : "granted_to"
+    permission_group ||--o{ permission : "contains"
+    
+    room_types ||--o{ rooms : "categorizes"
+    customers ||--o{ reservations : "makes"
+    
+    reservations ||--o{ reservation_details : "includes"
+    rooms ||--o{ reservation_details : "booked_in"
+    
+    reservations ||--o| check_ins : "initiates"
+    employees ||--o{ check_ins : "processes"
+    
+    reservations ||--o| check_outs : "concludes"
+    employees ||--o{ check_outs : "settles"
+    
+    reservations ||--o{ payments : "billed_under"
+    
+    reservations ||--o{ service_orders : "requests"
+    services ||--o{ service_orders : "ordered_in"

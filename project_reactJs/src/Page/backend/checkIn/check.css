@@ -1,0 +1,279 @@
+body.dark-mode .dashboard {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.light-mode .dashboard {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+body.dark-mode .dashboard .room-type-table tbody tr:hover {
+  background: #1e293b;
+}
+
+.checkin-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+  gap: 10px;
+}
+
+.checkin-search div {
+  display: flex;
+  align-items: center;
+}
+
+.checkin-search div input,
+.checkin-search div select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.checkin-search div input[type="text"] {
+  min-width: 280px;
+}
+
+body.light-mode .checkin-search div input,
+body.light-mode .checkin-search div select {
+  background: #ffffff;
+  color: #111827;
+  border-color: #d1d5db;
+}
+
+body.dark-mode .checkin-search div input,
+body.dark-mode .checkin-search div select {
+  background: #1f2937;
+  color: #f8fafc;
+  border-color: #374151;
+}
+
+body.dark-mode .checkin-search div input::placeholder {
+  color: #94a3b8;
+}
+
+body.dark-mode .checkin-search div select option {
+  background: #1f2937;
+  color: #f8fafc;
+}
+
+/* Container Layout */
+.checkin-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Base Card Styling */
+.checkin-card-item {
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.light-mode .checkin-card-item {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .checkin-card-item {
+  background-color: #111827;
+  border: 1px solid #374151;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.4);
+}
+
+.checkin-card-item:hover {
+  transform: translateY(-2px);
+}
+
+body.light-mode .checkin-card-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-mode .checkin-card-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Header Section: Employee Profile & Status */
+.checkin-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+body.light-mode .checkin-header {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+body.dark-mode .checkin-header {
+  border-bottom: 1px solid #374151;
+}
+
+.checkin-header img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.employee-info {
+  flex: 1;
+}
+
+.employee-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+body.light-mode .employee-info h3 {
+  color: #111827;
+}
+
+body.dark-mode .employee-info h3 {
+  color: #f9fafb;
+}
+
+.employee-info span {
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+body.light-mode .employee-info span {
+  color: #6b7280;
+}
+
+body.dark-mode .employee-info span {
+  color: #cbd5e1;
+}
+
+/* Status Badge */
+.checkin-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-checked-in {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* Grid Details Section */
+.guest-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  border-radius: 8px;
+}
+
+body.light-mode .guest-info {
+  background-color: #f9fafb;
+}
+
+body.dark-mode .guest-info {
+  background-color: #0f172a;
+}
+
+.guest-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-info label {
+  font-size: 0.725rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+body.light-mode .guest-info label,
+body.light-mode .checkin-dates label {
+  color: #6b7280;
+}
+
+body.dark-mode .guest-info label,
+body.dark-mode .checkin-dates label {
+  color: #94a3b8;
+}
+
+.guest-info strong {
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.light-mode .guest-info strong {
+  color: #1f2937;
+}
+
+body.dark-mode .guest-info strong,
+body.dark-mode .checkin-dates p {
+  color: #f1f5f9;
+}
+
+body.light-mode .checkin-dates p {
+  color: #374151;
+}
+
+/* Dates Section */
+.checkin-dates {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.25rem;
+}
+
+.checkin-dates div {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkin-dates label {
+  font-size: 0.725rem;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.checkin-dates p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Empty State Styling */
+.no-checkin {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 12px;
+}
+
+body.light-mode .no-checkin {
+  background: #f9fafb;
+  border: 2px dashed #e5e7eb;
+  color: #6b7280;
+}
+
+body.dark-mode .no-checkin {
+  background: #111827;
+  border: 2px dashed #374151;
+  color: #cbd5e1;
+}

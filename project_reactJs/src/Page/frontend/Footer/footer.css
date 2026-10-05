@@ -1,0 +1,197 @@
+.hotel-footer {
+  background: #0d1b2a;
+  color: #fff;
+  padding-top: 70px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-column h3 {
+  margin-bottom: 22px;
+  color: #d4af37;
+  font-size: 22px;
+}
+
+.footer-logo {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer-logo span {
+  color: #d4af37;
+}
+
+.footer-description {
+  line-height: 1.8;
+  color: #d5d5d5;
+  margin-bottom: 25px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #d4af37;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  transition: .3s;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  background: white;
+  color: #0d1b2a;
+  transform: translateY(-5px);
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 14px;
+}
+
+.footer-column ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.footer-column ul li a:hover {
+  color: #d4af37;
+  padding-left: 8px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.contact-item svg {
+  color: #d4af37;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.newsletter input {
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 15px;
+}
+
+.newsletter button {
+  padding: 14px;
+  border: none;
+  background: #d4af37;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.newsletter button:hover {
+  background: #b9931f;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.15);
+  margin-top: 60px;
+  padding: 25px;
+  text-align: center;
+  color: #bbb;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+  .hotel-footer {
+    padding-top: 50px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .newsletter {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    font-size: 28px;
+  }
+
+  .footer-column h3 {
+    font-size: 20px;
+  }
+
+  .footer-description {
+    font-size: 15px;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    font-size: 14px;
+  }
+}
